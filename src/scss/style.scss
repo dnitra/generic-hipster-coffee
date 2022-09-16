@@ -30,6 +30,7 @@ header {
   display: flex;
   justify-content: center;
   background-color: $header-background;
+  padding-bottom: 10px;
 }
 
 .nav {
@@ -70,5 +71,42 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.footer {
+  min-width: 600px;
+  height: 200px;
+  width: 100%;
+  background-color: $footer-background;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  a {
+    text-decoration: none;
+    color: $text-header;
+    font-size: 16px;
+
+    &:hover {
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  &__links {
+    width: 35%;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__social {
+    text-align: center;
+    color: white;
+
+    span {
+      font-weight: bold;
+    }
   }
 }
