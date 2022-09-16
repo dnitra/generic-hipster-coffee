@@ -237,12 +237,22 @@ header {
   display: flex;
   gap: 80px;
 
+
   img {
-    width: 40%;
+    min-width: 300px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .story__container {
+    display: flex;
+    flex-direction: column;
+
   }
 }
 
 .contact {
+  
   width: 100%;
   padding: 50px 0;
   display: flex;
@@ -290,7 +300,7 @@ header {
     background-color: $footer-background;
     color: white;
     transition: all 0.4s;
-    
+
     &:active {
       transform: scale(0.95);
     }
