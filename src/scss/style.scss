@@ -36,11 +36,10 @@ header {
 }
 
 .nav {
-  min-width: 600px;
   width: 80%;
   height: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: $header-background;
 
   img {
@@ -58,6 +57,7 @@ header {
       text-decoration: none;
       color: $text-header;
       font-size: 16px;
+      min-width: 20%;
 
       &:hover {
         font-weight: bold;
@@ -67,18 +67,8 @@ header {
   }
 }
 
-@media screen and (max-width: 800px) {
-  .nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-}
-
 .footer {
-  min-width: 600px;
-  height: 200px;
+  // height: 200px;
   width: 100%;
   background-color: $footer-background;
   display: flex;
@@ -101,17 +91,39 @@ header {
     width: 35%;
     display: flex;
     justify-content: space-around;
+    margin: 5rem 0;
   }
 
   &__social {
     text-align: center;
     color: white;
+    padding-bottom: 2rem;
 
     span {
       font-weight: bold;
     }
   }
 }
+
+@media (max-width: 800px) {
+  .footer__links {
+    width: 90%;
+  }
+  .nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__links {
+      width: 90%;
+    }
+  }
+
+  // .header
+}
+
+/* ------------------------ COFFEE SECTION ------------------------ */
 
 .coffee {
   width: 80%;
@@ -161,10 +173,6 @@ header {
         width: 70%;
       }
 
-      // @media (max-width: 800px) {
-      //   width: 70%;
-      // }
-
       .item__heading {
         font-size: 28px;
         padding: 1rem;
@@ -193,10 +201,10 @@ header {
   }
 }
 
-/* ------------------------ HOME COFFEE ------------------------ */
+/* ------------------------ HOME SECTION ------------------------ */
 
 .home {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
 
   &__heading {
@@ -226,6 +234,12 @@ header {
     margin-bottom: 1.5rem;
     font-weight: 300;
 
+    @media (max-width: 800px) {
+      flex-direction: column;
+      text-align: left;
+      gap: 1.5rem;
+    }
+
     .heading__contact {
       font-weight: 300;
       text-transform: uppercase;
@@ -239,5 +253,6 @@ header {
 
   &__map {
     width: 100%;
+    margin-bottom: -3rem;
   }
 }
